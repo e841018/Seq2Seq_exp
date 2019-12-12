@@ -88,7 +88,7 @@ def cluster(point_list, n_cluster, dist='Euc'):
         reordered_centers.append(centers[i])
     return reordered_groups, reordered_centers
 
-def plot_weights(W, groups=None, perm_dim = (True, True)):
+def plot_weights(W, groups=None, perm_dim=(True, True), figsize=(32,28)):
     # concatenate groups and reorder cells
     if groups:
         indices = []
@@ -108,7 +108,7 @@ def plot_weights(W, groups=None, perm_dim = (True, True)):
             W = W[:,indices]
         
     # plot
-    fig, ax = plt.subplots(figsize=(32,28))
+    fig, ax = plt.subplots(figsize=figsize)
     ax.xaxis.tick_top()
     ax.xaxis.set_label_position('top')
     
