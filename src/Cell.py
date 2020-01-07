@@ -126,7 +126,7 @@ def plot_weights(W, groups=None, perm_dim=(True, True), figsize=(32,28)):
         plt.xticks(fontsize=48)
         plt.yticks(fontsize=48)
         if perm_dim[0]:
-            plt.yticks(ticks, labels)
+#             plt.yticks(ticks, labels)
             plt.ylabel('Group ID: Group size', fontsize=48)
     
     plt.savefig('weight_.png', dpi=100, bbox_inches='tight', pad_inches=0)
